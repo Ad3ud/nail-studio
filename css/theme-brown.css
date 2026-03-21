@@ -1,0 +1,37 @@
+/* ═══════════════════════════════════════════════════════════
+   ТЕМА: Тёмно-коричневая (вдохновлена Tekstura.moscow)
+   Тёплый эспрессо-коричневый фон + зелёный логотип
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --color-bg:           #252019;
+  --color-bg-alt:       #252019;
+  --color-bg-card:      #2E271F;
+  --color-bg-dark:      #252019;
+  --color-accent:       #3A6040;
+  --color-accent-dark:  #2B4A30;
+  --color-accent-logo:  #2B4A30;
+  --color-text:         #EDE8DF;
+  --color-text-muted:   #8A8070;
+  --color-border:       rgba(255, 255, 255, 0.08);
+  --color-border-accent: rgba(58, 96, 64, 0.2);
+  --color-pink:         #D4A5A5;
+  --color-white:        #FFFFFF;
+}
+
+.header--scrolled {
+  background: rgba(37, 32, 25, 0.97);
+}
+
+.hero__overlay {
+  background: linear-gradient(
+    160deg,
+    rgba(20, 17, 13, 0.88) 0%,
+    rgba(20, 17, 13, 0.60) 55%,
+    rgba(20, 17, 13, 0.70) 100%
+  );
+}
+
+.certificate-card {
+  background: linear-gradient(135deg, #2E271F 0%, #252019 100%);
+}
