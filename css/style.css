@@ -954,8 +954,8 @@ p {
 }
 
 .pricing__badge--hit {
-  background: rgba(92, 140, 100, 0.15);
-  color: var(--color-accent);
+  background: rgba(212, 165, 165, 0.15);
+  color: var(--color-pink);
 }
 
 .pricing__badge--new {
