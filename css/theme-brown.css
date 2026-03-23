@@ -15,7 +15,7 @@
   --color-text-muted:   #9A7A76;
   --color-border:       rgba(0, 0, 0, 0.08);
   --color-border-accent: rgba(58, 96, 64, 0.2);
-  --color-pink:         #C4756A;
+  --color-pink:         #B87A8A;
   --color-white:        #FFFFFF;
 }
 
@@ -34,4 +34,18 @@
 
 .certificate-card {
   background: linear-gradient(135deg, #F5E0EE 0%, #FFEFF7 100%);
+}
+
+.footer__logo {
+  color: rgba(58, 42, 40, 0.75);
+}
+
+.footer__social,
+.footer__link {
+  color: rgba(58, 42, 40, 0.6);
+}
+
+.footer__social:hover,
+.footer__link:hover {
+  color: var(--color-accent);
 }
