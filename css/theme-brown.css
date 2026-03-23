@@ -37,8 +37,8 @@
 }
 
 .pricing__tab.is-active {
-  background: var(--color-pink);
-  color: var(--color-white);
+  background: rgba(184, 122, 138, 0.25);
+  color: var(--color-pink);
 }
 
 .hero__eyebrow {
