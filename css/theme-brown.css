@@ -36,6 +36,11 @@
   background: linear-gradient(135deg, #F5E0EE 0%, #FFEFF7 100%);
 }
 
+.pricing__tab.is-active {
+  background: var(--color-pink);
+  color: var(--color-white);
+}
+
 .hero__eyebrow {
   color: rgba(255, 255, 255, 0.75);
 }

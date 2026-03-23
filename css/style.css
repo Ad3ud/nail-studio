@@ -884,6 +884,8 @@ p {
   cursor: pointer;
   white-space: nowrap;
   letter-spacing: 0.04em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pricing__tab:hover { color: var(--color-text); }
@@ -1601,6 +1603,21 @@ a.contacts__group-value:hover {
 @media (max-width: 639px) {
   .hero__scroll {
     display: none;
+  }
+
+  .pricing__tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .pricing__tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pricing__tab {
+    flex-shrink: 0;
   }
 
   /* Уменьшаем padding контейнера */
