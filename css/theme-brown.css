@@ -1,37 +1,37 @@
 /* ═══════════════════════════════════════════════════════════
-   ТЕМА: Тёмно-коричневая (вдохновлена Tekstura.moscow)
-   Тёплый эспрессо-коричневый фон + зелёный логотип
+   ТЕМА: Пудровый розовый (вдохновлена сертификатом S.A Beauty)
+   Нежный розово-пудровый фон + зелёный акцент
    ═══════════════════════════════════════════════════════════ */
 
 :root {
-  --color-bg:           #252019;
-  --color-bg-alt:       #252019;
-  --color-bg-card:      #2E271F;
-  --color-bg-dark:      #252019;
+  --color-bg:           #F9EAE6;
+  --color-bg-alt:       #F9EAE6;
+  --color-bg-card:      #F2DDD9;
+  --color-bg-dark:      #EDD0CB;
   --color-accent:       #3A6040;
   --color-accent-dark:  #2B4A30;
   --color-accent-logo:  #2B4A30;
-  --color-text:         #EDE8DF;
-  --color-text-muted:   #8A8070;
-  --color-border:       rgba(255, 255, 255, 0.08);
+  --color-text:         #3A2A28;
+  --color-text-muted:   #9A7A76;
+  --color-border:       rgba(0, 0, 0, 0.08);
   --color-border-accent: rgba(58, 96, 64, 0.2);
-  --color-pink:         #D4A5A5;
+  --color-pink:         #C4756A;
   --color-white:        #FFFFFF;
 }
 
 .header--scrolled {
-  background: rgba(37, 32, 25, 0.97);
+  background: rgba(249, 234, 230, 0.97);
 }
 
 .hero__overlay {
   background: linear-gradient(
     160deg,
-    rgba(20, 17, 13, 0.88) 0%,
-    rgba(20, 17, 13, 0.60) 55%,
-    rgba(20, 17, 13, 0.70) 100%
+    rgba(58, 42, 40, 0.75) 0%,
+    rgba(58, 42, 40, 0.45) 55%,
+    rgba(58, 42, 40, 0.55) 100%
   );
 }
 
 .certificate-card {
-  background: linear-gradient(135deg, #2E271F 0%, #252019 100%);
+  background: linear-gradient(135deg, #F2DDD9 0%, #F9EAE6 100%);
 }
