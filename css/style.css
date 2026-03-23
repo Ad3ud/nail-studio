@@ -1599,6 +1599,10 @@ a.contacts__group-value:hover {
 
 /* ─── Mobile (< 640px) ───────────────────────────────────── */
 @media (max-width: 639px) {
+  .hero__scroll {
+    display: none;
+  }
+
   /* Уменьшаем padding контейнера */
   .container {
     padding: 0 16px;
