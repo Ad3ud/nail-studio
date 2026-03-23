@@ -4,10 +4,10 @@
    ═══════════════════════════════════════════════════════════ */
 
 :root {
-  --color-bg:           #F9EAE6;
-  --color-bg-alt:       #F9EAE6;
-  --color-bg-card:      #F2DDD9;
-  --color-bg-dark:      #EDD0CB;
+  --color-bg:           #FFEFF7;
+  --color-bg-alt:       #FFEFF7;
+  --color-bg-card:      #F5E0EE;
+  --color-bg-dark:      #EDD0E3;
   --color-accent:       #3A6040;
   --color-accent-dark:  #2B4A30;
   --color-accent-logo:  #2B4A30;
@@ -20,7 +20,7 @@
 }
 
 .header--scrolled {
-  background: rgba(249, 234, 230, 0.97);
+  background: rgba(255, 239, 247, 0.97);
 }
 
 .hero__overlay {
@@ -33,5 +33,5 @@
 }
 
 .certificate-card {
-  background: linear-gradient(135deg, #F2DDD9 0%, #F9EAE6 100%);
+  background: linear-gradient(135deg, #F5E0EE 0%, #FFEFF7 100%);
 }
