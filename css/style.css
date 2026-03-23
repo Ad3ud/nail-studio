@@ -428,9 +428,7 @@ p {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('../images/XXXL2.jpg');
-  background-size: cover;
-  background-position: 75% 15%;
+  background: #1a1210;
   transform: scale(1.05);
   transition: transform 8s ease;
 }
