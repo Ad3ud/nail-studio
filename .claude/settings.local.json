@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:s-a-beauty.clients.site)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(cd:*)"
     ]
   }
 }

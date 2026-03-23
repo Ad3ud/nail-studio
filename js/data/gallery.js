@@ -53,6 +53,30 @@ const GALLERY_DATA = [
     ratio: "wide",
   },
   {
+    src: "images/gallery/manicure-7.jpg",
+    alt: "Маникюр",
+    tags: ["Маникюр"],
+    ratio: "tall",
+  },
+  {
+    src: "images/gallery/manicure-8.jpg",
+    alt: "Маникюр",
+    tags: ["Маникюр"],
+    ratio: "wide",
+  },
+  {
+    src: "images/gallery/manicure-9.jpg",
+    alt: "Маникюр",
+    tags: ["Маникюр"],
+    ratio: "tall",
+  },
+  {
+    src: "images/gallery/manicure-10.jpg",
+    alt: "Маникюр",
+    tags: ["Маникюр"],
+    ratio: "wide",
+  },
+  {
     src: "images/gallery/pedicure-1.webp",
     alt: "Красный педикюр",
     tags: ["Педикюр"],
