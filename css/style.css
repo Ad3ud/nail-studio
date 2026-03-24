@@ -473,9 +473,10 @@ p {
 
 .hero__logo {
   display: block;
-  width: 340px;
-  max-width: 75vw;
+  width: 420px;
+  max-width: 85vw;
   margin: -20px auto 24px;
+  filter: brightness(0) saturate(100%) invert(82%) sepia(18%) saturate(400%) hue-rotate(300deg) brightness(105%);
 }
 
 .hero__eyebrow {
@@ -1633,7 +1634,7 @@ a.contacts__group-value:hover {
 
   /* Hero */
   .hero__logo {
-    width: 240px;
+    width: 300px;
     margin: -20px auto 20px;
   }
 
