@@ -711,7 +711,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center top;
   transition: transform var(--transition-slow);
   filter: brightness(0.92) saturate(0.85);
 }
@@ -1624,6 +1624,10 @@ a.contacts__group-value:hover {
 @media (max-width: 639px) {
   .hero__scroll {
     display: none;
+  }
+
+  .master-card__photo-wrap {
+    aspect-ratio: 3/4;
   }
 
   .pricing__tabs {
