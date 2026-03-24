@@ -94,11 +94,17 @@ const CONTENT = {
       ],
     },
     {
-      name: "Екатерина Новикова",
-      role: "Мастер маникюра",
-      bio: "5 лет опыта. Тонкое чувство цвета, любовь к минимализму и геометрии.",
-      photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&h=500&q=80",
-      tags: ["Маникюр", "Гель-лак", "Дизайн"],
+      name: "Дарья",
+      role: "Мастер маникюра и педикюра",
+      bio: "4 года опыта. Обучение в Академии успеха MAKAROFF. Маникюр: комбинированный, мужской, с покрытием под кутикулу, дизайны, архитектура, наращивание. Педикюр: с покрытием гель-лак, аппаратный, Smart-педикюр.",
+      photo: "images/masters/daria-main.jpg",
+      tags: ["Маникюр", "Педикюр", "Наращивание"],
+      portfolio: [
+        "images/masters/daria-1.jpg",
+        "images/masters/daria-2.jpg",
+        "images/masters/daria-3.jpg",
+        "images/masters/daria-4.jpg",
+      ],
     },
   ],
 
