@@ -119,6 +119,19 @@ const CONTENT = {
         "images/masters/olesya-4.jpg",
       ],
     },
+    {
+      name: "Анастасия Ермоленко",
+      role: "Администратор · Бровист",
+      bio: "Обучение у NUTA_BROWS. Брови: архитектура, коррекция, осветление, прореживание, окрашивание краской/хной, ламинирование, ботокс. Ресницы: окрашивание. Депиляция зон лица.",
+      photo: "images/masters/anastasia-main.jpg",
+      tags: ["Брови", "Ресницы", "Депиляция"],
+      portfolio: [
+        "images/masters/anastasia-1.jpg",
+        "images/masters/anastasia-2.jpg",
+        "images/masters/anastasia-3.jpg",
+        "images/masters/anastasia-4.jpg",
+      ],
+    },
   ],
 
   // ─── Преимущества ────────────────────────────────────
