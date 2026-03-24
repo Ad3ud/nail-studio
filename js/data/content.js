@@ -73,6 +73,12 @@ const CONTENT = {
       bio: "Обучение в Dellon, ParisNail и Soda. Работает в студии с 2022 года. Специализация: Smart-педикюр, пилочный, японский, комбинированный и аппаратный маникюр, покрытие плёнками.",
       photo: "images/master-elena.jpg",
       tags: ["Маникюр", "Педикюр", "Smart-педикюр"],
+      portfolio: [
+        "images/masters/elena-1.jpg",
+        "images/masters/elena-2.jpg",
+        "images/masters/elena-3.jpg",
+        "images/masters/elena-4.jpg",
+      ],
     },
     {
       name: "Мария Соколова",

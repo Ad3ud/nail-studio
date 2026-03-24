@@ -104,6 +104,11 @@ function renderMasters() {
     const card = document.createElement("div");
     card.className = "master-card animate-on-scroll";
     const tagsHTML = master.tags.map((t) => `<span class="master-card__tag">${t}</span>`).join("");
+    const portfolioHTML = master.portfolio && master.portfolio.length
+      ? `<div class="master-card__portfolio">
+          ${master.portfolio.map((src, i) => `<img src="${src}" alt="Работа ${master.name}" class="master-card__portfolio-thumb" loading="lazy" data-master="${master.name}" data-index="${i}" />`).join("")}
+        </div>`
+      : "";
     card.innerHTML = `
       <div class="master-card__photo-wrap">
         <img src="${master.photo}" alt="${master.name}" class="master-card__photo" loading="lazy" />
@@ -113,10 +118,53 @@ function renderMasters() {
         <p class="master-card__role">${master.role}</p>
         <p class="master-card__bio">${master.bio}</p>
         <div class="master-card__tags">${tagsHTML}</div>
+        ${portfolioHTML}
       </div>
     `;
+
+    if (master.portfolio && master.portfolio.length) {
+      card.querySelectorAll(".master-card__portfolio-thumb").forEach((img) => {
+        img.addEventListener("click", () => openMasterLightbox(master.portfolio, parseInt(img.dataset.index)));
+      });
+    }
+
     grid.appendChild(card);
   });
+}
+
+function openMasterLightbox(photos, startIndex) {
+  let current = startIndex;
+  const lb = document.createElement("div");
+  lb.className = "lightbox is-open";
+  lb.innerHTML = `
+    <div class="lightbox__backdrop"></div>
+    <div class="lightbox__body">
+      <button class="lightbox__close" aria-label="Закрыть">✕</button>
+      <button class="lightbox__prev" aria-label="Предыдущее">‹</button>
+      <div class="lightbox__img-wrap">
+        <img class="lightbox__img" src="${photos[current]}" alt="" />
+      </div>
+      <button class="lightbox__next" aria-label="Следующее">›</button>
+    </div>
+  `;
+  document.body.appendChild(lb);
+  document.body.classList.add("no-scroll");
+
+  const img = lb.querySelector(".lightbox__img");
+  const update = () => { img.src = photos[current]; };
+  const close = () => { lb.remove(); document.body.classList.remove("no-scroll"); };
+
+  lb.querySelector(".lightbox__backdrop").addEventListener("click", close);
+  lb.querySelector(".lightbox__close").addEventListener("click", close);
+  lb.querySelector(".lightbox__prev").addEventListener("click", () => { current = (current - 1 + photos.length) % photos.length; update(); });
+  lb.querySelector(".lightbox__next").addEventListener("click", () => { current = (current + 1) % photos.length; update(); });
+
+  const onKey = (e) => {
+    if (e.key === "Escape") { close(); document.removeEventListener("keydown", onKey); }
+    if (e.key === "ArrowLeft") { current = (current - 1 + photos.length) % photos.length; update(); }
+    if (e.key === "ArrowRight") { current = (current + 1) % photos.length; update(); }
+  };
+  document.addEventListener("keydown", onKey);
 }
 
 function renderAdvantages() {

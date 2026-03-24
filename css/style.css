@@ -764,6 +764,30 @@ p {
   letter-spacing: 0.04em;
 }
 
+/* ─── Портфолио мастера ──────────────────────────────────── */
+.master-card__portfolio {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-top: var(--space-sm);
+}
+
+.master-card__portfolio-thumb {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform var(--transition), opacity var(--transition);
+  filter: brightness(0.95);
+}
+
+.master-card__portfolio-thumb:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+  filter: brightness(1);
+}
+
 /* ─── 11. Галерея ────────────────────────────────────────── */
 .gallery__filters {
   display: flex;

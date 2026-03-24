@@ -5,7 +5,8 @@
       "Bash(cp:*)",
       "Bash(cd:*)",
       "Bash(chmod:*)",
-      "Bash(sips:*)"
+      "Bash(sips:*)",
+      "Bash(for f:*)"
     ]
   }
 }
