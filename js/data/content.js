@@ -106,6 +106,19 @@ const CONTENT = {
         "images/masters/daria-4.jpg",
       ],
     },
+    {
+      name: "Олеся Косничева",
+      role: "Мастер маникюра и педикюра",
+      bio: "Маникюр: комби/аппаратный, тонкое укрепление гелем, наращивание, дизайны, покрытие гель-лак. Педикюр: Smart-педикюр, экспресс-педикюр. Обучение: Nail City (академия Юлии Лариной), курсы Артёма Чичерина, VARTA ACADEMY.",
+      photo: "images/masters/olesya-main.jpg",
+      tags: ["Маникюр", "Педикюр", "Наращивание", "Smart-педикюр"],
+      portfolio: [
+        "images/masters/olesya-1.jpg",
+        "images/masters/olesya-2.jpg",
+        "images/masters/olesya-3.jpg",
+        "images/masters/olesya-4.jpg",
+      ],
+    },
   ],
 
   // ─── Преимущества ────────────────────────────────────
