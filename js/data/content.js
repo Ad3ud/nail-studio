@@ -125,6 +125,12 @@ const CONTENT = {
       bio: "Практикует с 2020 года. Наращивание, ремонты, чистый маникюр, френч, дизайны средней сложности.",
       photo: "images/masters/axinia-main.jpg",
       tags: ["Маникюр", "Педикюр", "Наращивание"],
+      portfolio: [
+        "images/masters/axinia-1.jpg",
+        "images/masters/axinia-2.jpg",
+        "images/masters/axinia-3.jpg",
+        "images/masters/axinia-4.jpg",
+      ],
     },
     {
       name: "София Ретюнская",
