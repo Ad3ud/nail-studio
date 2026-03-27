@@ -259,8 +259,8 @@ function buildCertBackEl(d) {
 
   el.innerHTML = `
     <div style="position:absolute;top:0;left:0;right:0;bottom:0;
-                display:flex;flex-direction:column;align-items:center;
-                padding:50px 70px 30px;">
+                display:flex;flex-direction:column;align-items:center;justify-content:center;
+                padding:30px 70px 60px;">
 
       <p style="font-size:11px;letter-spacing:3px;color:#b87a8a;margin:0 0 8px;text-transform:uppercase;">
         A Gift From Me To You
