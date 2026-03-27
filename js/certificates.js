@@ -44,11 +44,34 @@ function renderCertAmounts() {
       document.querySelectorAll('.cert-amount').forEach(b => b.classList.remove('is-active'));
       btn.classList.add('is-active');
       selectedAmount = amount;
-      const amountSpan = document.querySelector('.cert-submit-amount');
-      if (amountSpan) amountSpan.textContent = amount.toLocaleString('ru-RU') + ' ₽';
+      const customInput = document.getElementById('cert-custom-amount');
+      if (customInput) customInput.value = '';
+      updateSubmitAmount(amount);
     });
     container.appendChild(btn);
   });
+
+  // Поле своей суммы
+  const customInput = document.getElementById('cert-custom-amount');
+  if (customInput) {
+    customInput.addEventListener('input', () => {
+      const val = parseInt(customInput.value, 10);
+      document.querySelectorAll('.cert-amount').forEach(b => b.classList.remove('is-active'));
+      if (val >= 500) {
+        selectedAmount = val;
+        updateSubmitAmount(val);
+      } else {
+        selectedAmount = null;
+        updateSubmitAmount(null);
+      }
+    });
+  }
+}
+
+function updateSubmitAmount(amount) {
+  const span = document.querySelector('.cert-submit-amount');
+  if (!span) return;
+  span.textContent = amount ? amount.toLocaleString('ru-RU') + ' ₽' : '—';
 }
 
 // ─── Форма ────────────────────────────────────────────────────────────────────
@@ -59,12 +82,17 @@ function initCertForm() {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    document.getElementById('cert-error')?.style.setProperty('display', 'none');
 
     const toName   = form.querySelector('[name="to_name"]').value.trim();
     const fromName = form.querySelector('[name="from_name"]').value.trim();
     const toEmail  = form.querySelector('[name="to_email"]').value.trim();
 
     if (!toName || !fromName || !toEmail) return;
+    if (!selectedAmount || selectedAmount < 500) {
+      setCertStatus('error', 'Укажите номинал сертификата (минимум 500 ₽)');
+      return;
+    }
 
     const certData = {
       toName, fromName, toEmail,

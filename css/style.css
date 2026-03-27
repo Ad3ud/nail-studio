@@ -1759,6 +1759,41 @@ a.contacts__group-value:hover {
   color: #fff;
 }
 
+.cert-custom-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.cert-custom-input {
+  padding: 10px 20px;
+  border: 1.5px solid var(--color-border-accent);
+  border-radius: 40px;
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  width: 200px;
+  text-align: center;
+  outline: none;
+  transition: border-color var(--transition);
+  -moz-appearance: textfield;
+}
+
+.cert-custom-input::-webkit-outer-spin-button,
+.cert-custom-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.cert-custom-input:focus {
+  border-color: var(--color-accent);
+}
+
+.cert-custom-input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
 .cert-form {
   max-width: 560px;
   margin: 0 auto;
