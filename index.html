@@ -216,63 +216,63 @@
       </div>
     </section>
 
-    <!-- ═══ СЕРТИФИКАТЫ (ЗАГЛУШКА) ══════════════════════ -->
-    <section id="certificates" class="section section--dark" style="padding-top: 0;">
+    <!-- ═══ СЕРТИФИКАТЫ ══════════════════════════════════ -->
+    <section id="certificates" class="section">
       <div class="container">
-        <!-- Разделитель -->
-        <div style="height: 1px; background: rgba(255,255,255,0.07); margin-bottom: var(--space-xl);"></div>
-
-        <div class="certificates__inner">
-          <div class="certificates__text">
-            <div class="section-header">
-              <span class="section-eyebrow">Подарок с душой</span>
-              <h2 class="section-title">Подарочные<br><em style="color: var(--color-accent);">сертификаты</em></h2>
-            </div>
-            <p class="certificates__desc">
-              Подарите близкому человеку время для себя. Сертификат на любую сумму
-              или конкретную услугу — лучший подарок для тех, кто ценит заботу.
-            </p>
-            <!-- Кнопка неактивна — функционал в разработке -->
-            <a href="#contacts" class="btn btn--outline" style="margin-bottom: 20px;">
-              Узнать подробности
-            </a>
-            <div class="certificates__coming">
-              Онлайн-оформление — скоро
-            </div>
-          </div>
-
-          <!-- Декоративная карточка сертификата -->
-          <div class="certificate-card animate-on-scroll">
-            <span class="certificate-card__eyebrow">Подарочный сертификат</span>
-            <div class="certificate-card__name" data-content="studio.name">
-              S.A <em>Beauty</em>
-            </div>
-            <div class="certificate-card__tagline">Студия маникюра и педикюра</div>
-
-            <div class="certificate-card__divider"></div>
-
-            <div class="certificate-card__row">
-              <div>
-                <div class="certificate-card__label">Получатель</div>
-                <div class="certificate-card__value">Анна Смирнова</div>
-              </div>
-              <div style="text-align: right;">
-                <div class="certificate-card__label">Номинал</div>
-                <div class="certificate-card__amount">5 000 ₽</div>
-              </div>
-            </div>
-
-            <div class="certificate-card__divider"></div>
-
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <div class="certificate-card__label">Действителен до</div>
-                <div class="certificate-card__value" style="font-size: 15px;">31.12.2026</div>
-              </div>
-              <div style="font-size: 28px; opacity: 0.15;">✦</div>
-            </div>
-          </div>
+        <div class="section-header section-header--center animate-on-scroll">
+          <span class="section-eyebrow">Подарок с душой</span>
+          <h2 class="section-title">Подарочные сертификаты</h2>
+          <p class="section-subtitle">Подарите близким время для себя — сертификат на любую сумму</p>
         </div>
+
+        <!-- Выбор номинала -->
+        <div class="cert-amounts"></div>
+
+        <!-- Форма -->
+        <form class="cert-form" id="cert-form">
+          <div class="cert-form__row">
+            <div class="cert-form__group">
+              <label class="cert-form__label">Кому</label>
+              <input class="cert-form__input" type="text" name="to_name"
+                placeholder="Имя получателя" required autocomplete="off">
+            </div>
+            <div class="cert-form__group">
+              <label class="cert-form__label">От кого</label>
+              <input class="cert-form__input" type="text" name="from_name"
+                placeholder="Ваше имя" required autocomplete="off">
+            </div>
+          </div>
+          <div class="cert-form__group">
+            <label class="cert-form__label">Email получателя</label>
+            <input class="cert-form__input" type="email" name="to_email"
+              placeholder="email@example.com" required autocomplete="email">
+          </div>
+          <button type="submit" class="btn btn--primary cert-form__submit">
+            Оплатить <span class="cert-submit-amount">1 000 ₽</span>
+          </button>
+          <p class="cert-form__note">Сертификат отправится на email сразу после оплаты</p>
+        </form>
+
+        <!-- Загрузка -->
+        <div class="cert-state" id="cert-loading" style="display:none;">
+          <div class="cert-spinner"></div>
+          <p>Генерируем сертификат и отправляем на email…</p>
+        </div>
+
+        <!-- Успех -->
+        <div class="cert-state" id="cert-success" style="display:none;">
+          <div class="cert-success__icon">✦</div>
+          <h3 class="cert-success__title">Сертификат оформлен!</h3>
+          <p class="cert-success__text">
+            Подтверждение отправлено на <strong class="cert-success__email"></strong>
+          </p>
+          <p class="cert-success__sub">Номер: <span class="cert-success__id"></span></p>
+          <button class="btn btn--outline" id="cert-download-btn">Скачать PDF</button>
+        </div>
+
+        <!-- Ошибка -->
+        <div class="cert-state cert-state--error" id="cert-error" style="display:none;"></div>
+
       </div>
     </section>
 
@@ -400,6 +400,12 @@
   <script src="js/price.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Сертификаты -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="js/certificates.js"></script>
 
   <!-- Анимация hero background при загрузке -->
   <script>

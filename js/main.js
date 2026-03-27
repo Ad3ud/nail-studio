@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPricing();
   initGallery();
   initSmoothScroll();
+  if (typeof initCertSection === "function") initCertSection();
 });
 
 // ─── Рендеринг контента из content.js ────────────────────
