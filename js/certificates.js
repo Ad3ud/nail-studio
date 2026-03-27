@@ -314,8 +314,10 @@ function buildCertBackEl(d) {
 function hideCertForm() {
   const form = document.getElementById('cert-form');
   const amounts = document.querySelector('.cert-amounts');
+  const customWrap = document.querySelector('.cert-custom-wrap');
   if (form) form.style.display = 'none';
   if (amounts) amounts.style.display = 'none';
+  if (customWrap) customWrap.style.display = 'none';
 }
 
 function setCertStatus(state, msg, certData, pdfDataUri) {
