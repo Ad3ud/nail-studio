@@ -258,13 +258,9 @@ function buildCertBackEl(d) {
   });
 
   el.innerHTML = `
-    <img src="images/certificate/cert-back-full.png"
-      style="position:absolute;top:0;left:0;width:100%;object-fit:cover;object-position:top;max-height:190px;"
-      crossorigin="anonymous">
-
-    <div style="position:absolute;top:190px;left:0;right:0;bottom:0;
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;
                 display:flex;flex-direction:column;align-items:center;
-                padding:20px 70px 30px;">
+                padding:50px 70px 30px;">
 
       <p style="font-size:11px;letter-spacing:3px;color:#b87a8a;margin:0 0 8px;text-transform:uppercase;">
         A Gift From Me To You
