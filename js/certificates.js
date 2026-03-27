@@ -182,14 +182,19 @@ async function onPaymentSuccess(certData) {
     triggerDownload(pdfDataUri, `sertifikat-${certData.certId}.pdf`);
 
     // Отправляем email с подтверждением
-    await emailjs.send(CERT.emailjsService, CERT.emailjsTemplate, {
-      to_email:  certData.toEmail,
-      to_name:   certData.toName,
-      from_name: certData.fromName,
-      amount:    certData.amount.toLocaleString('ru-RU') + ' ₽',
-      cert_id:   certData.certId,
-      expires:   certData.expires,
-    });
+    await emailjs.send(
+      CERT.emailjsService,
+      CERT.emailjsTemplate,
+      {
+        to_email:  certData.toEmail,
+        to_name:   certData.toName,
+        from_name: certData.fromName,
+        amount:    certData.amount.toLocaleString('ru-RU') + ' ₽',
+        cert_id:   certData.certId,
+        expires:   certData.expires,
+      },
+      { publicKey: CERT.emailjsPublicKey }
+    );
 
     setCertStatus('success', null, certData, pdfDataUri);
   } catch (err) {
