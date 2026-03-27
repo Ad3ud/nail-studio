@@ -8,7 +8,7 @@
 const CERT = {
   terminalKey: '1670767167731DEMO',   // ← Заменить на '1670767167731' при переходе на боевой
   emailjsService:  'service_41xvivf',
-  emailjsTemplate: 'template_oege2om',
+  emailjsTemplate: 'template_osyhwvr',
   emailjsPublicKey: 'xHuIdg_cpiM1GCIts',
   amounts: [1000, 2000, 3000, 5000],
   validityMonths: 12,
